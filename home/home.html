@@ -38,6 +38,11 @@
 		div.rightMenu span{
 			margin: 0px 20px 0px 20px;
 		}
+		div.rightMenu a{
+			color: white;
+			font-size: 16px;
+			/*font-weight: */
+		}
 		div.rightMenu img{
 			height: 30px;
 		}
@@ -45,8 +50,13 @@
 			max-width: 100%;
 			height: 510px;
 		}
-		div.carouselImage{
+		div.item img{
+			width: 100%;
 			height: 510px !important;
+		}
+		ol.carousel-indicators {
+			width: 20;
+			height: 20;
 		}
 		</style>
 	</head>
@@ -58,7 +68,7 @@
 					<span class="glyphicon glyphicon-th-list" style="margin-left: 10px"></span>
 					<span style="margin-left: 10px">商品分类</span>
 				</div>
-				<div class="rightMenu" style="background-color: green">
+				<div class="rightMenu">
 					<span><a href="#nowhere"><img src="http://how2j.cn/tmall/img/site/chaoshi.png"></a></span>
 					<span><a href="#nowhere"><img src="http://how2j.cn/tmall/img/site/guoji.png"></a></span>
 					<span><a href="#nowhere">平板电视</a></span>
@@ -90,12 +100,12 @@
 					</div>
 				</div>
 				<!-- controls -->
-				<a href="#carousel-of-product"  data-slide="prev" role="button" class="left carousel-control">
+				<!-- <a href="#carousel-of-product"  data-slide="prev" role="button" class="left carousel-control">
 					<span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
 				</a>
 				<a href="#carousel-of-product"  data-slide="next" role="button" class="right carousel-control">
 					<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
-				</a>
+				</a> -->
 			</div>
 		</div>
 	</body>
