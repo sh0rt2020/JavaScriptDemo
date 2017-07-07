@@ -54,15 +54,235 @@
 			width: 100%;
 			height: 510px !important;
 		}
-		ol.carousel-indicators {
+		ol.carousel-indicators{
 			width: 20;
 			height: 20;
+		}
+		div.categoryMenu{
+			width: 200px;
+			/*height: */
+			background-color: #e2e2e3;
+			margin-left: 20px;
+			position: absolute; //绝对定位
+			left: 0px;
+			top: 0px;
+			z-index: 1;	
+		}
+		div.categoryMenu a{
+			color: black;
+		}
+		div.categoryMenu a:hover{
+			color: lightskyblue;
+			text-decoration: none; //去掉下划线
+		}
+		div.productsAsideCategorys{
+			width: 800px;
+			height: 510px;
+			background-color: white;
+			margin-left: 220px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+		div.productsAsideCategorys div.row{
+			margin: 20px 80px 0px 80px;
+		}
+		div.productsAsideCategorys div.row div.seperator{
+			margin-top: 20px;
+			border-bottom-style: dashed;
+			border-bottom-width: 1px;
+			border-bottom-color: #e7e7e7;
+		}
+		div.productsAsideCategorys a{
+			color: #999;
+			font-size: 14px;
+			margin: 8px;
+		}
+		div.productsAsideCategorys a:hover{
+			color: #c40000;
+			text-decoration: none;
+		}
+		div.eachCategory{
+			line-height: 30px;
+			padding-left: 10px;
+			font-size: 14px;
+		}
+		div.eachCategory span{
+			margin-right: 10px;
+		}
+		div.eachCategory:hover{
+			background-color: white;
 		}
 		</style>
 	</head>
 
 	<body>
 		<div class="categoryWithCarousel">
+			<div style="position: relative;">
+				<div class="categoryMenu">
+					<div class="eachCategory" cid="83">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">平板电视</a>
+					</div>
+
+					<div class="eachCategory" cid="82">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">马桶</a>
+					</div>
+
+					<div class="eachCategory" cid="81">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">沙发</a>
+					</div>
+
+					<div class="eachCategory" cid="80">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">电热水器</a>
+					</div>
+
+					<div class="eachCategory" cid="79">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">平衡车</a>
+					</div>
+
+					<div class="eachCategory" cid="78">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">扫地机器人</a>
+					</div>
+
+					<div class="eachCategory" cid="77">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">原汁机</a>
+					</div>
+
+					<div class="eachCategory" cid="76">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">冰箱</a>
+					</div>
+
+					<div class="eachCategory" cid="75">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">空调</a>
+					</div>
+
+					<div class="eachCategory" cid="74">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">女表</a>
+					</div>
+
+					<div class="eachCategory" cid="73">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">男表</a>
+					</div>
+
+					<div class="eachCategory" cid="72">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">男士手拿包</a>
+					</div>
+
+					<div class="eachCategory" cid="71">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">男士西服</a>
+					</div>
+
+					<div class="eachCategory" cid="70">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">时尚男鞋</a>
+					</div>
+
+					<div class="eachCategory" cid="69">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">品牌女装</a>
+					</div>
+
+					<div class="eachCategory" cid="68">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">太阳镜</a>
+					</div>
+
+					<div class="eachCategory" cid="67">
+						<span class="glyphicon glyphicon-link"></span>
+						<a href="#nowhere">安全座椅</a>
+					</div>
+				</div>
+			</div>
+			<div style="position: relative;left: 0;top: 0;">
+				<div class="productsAsideCategorys" cid="83">
+					<div class="row">
+						<a href="#nowhere">大屏影院</a>
+						<a href="#nowhere">周末</a>
+						<a href="#nowhere">新品特惠</a>
+						<a href="#nowhere">32寸电视机</a>
+						<a href="#nowhere">智能网络</a>
+						<div class="seperator"></div>
+					</div>
+					<div class="row">
+						<a href="#nowhere">USB高清</a>
+						<a href="#nowhere">USB高清</a>
+						<a href="#nowhere">USB高清</a>
+						<a href="#nowhere">USB高清</a>
+						<a href="#nowhere">USB高清</a>
+						<a href="#nowhere">USB高清</a>
+						<a href="#nowhere">USB高清</a>
+						<div class="seperator"></div>
+					</div>
+					<div class="row">
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<a href="#nowhere">新品上市</a>
+						<div class="seperator"></div>
+					</div>
+					<div class="row">
+						<a href="#nowhere">智能操作系统</a>
+						<a href="#nowhere">智能操作系统</a>
+						<a href="#nowhere">智能操作系统</a>
+						<a href="#nowhere">智能操作系统</a>
+						<a href="#nowhere">智能操作系统</a>
+						<a href="#nowhere">智能操作系统</a>
+					</div>
+					<div class="row">
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+						<a href="#nowhere">限时特惠</a>
+					</div>
+					<div class="row">
+						<a href="#nowhere">YUNOS</a>
+						<a href="#nowhere">YUNOS</a>
+						<a href="#nowhere">YUNOS</a>
+						<a href="#nowhere">YUNOS</a>
+						<a href="#nowhere">YUNOS</a>
+						<a href="#nowhere">YUNOS</a>
+						<a href="#nowhere">YUNOS</a>
+					</div>
+					<div class="row">
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+						<a href="#nowhere">人气爆款</a>
+					</div>
+					<div class="row">
+						<a href="#nowhere">曲面机皇</a>
+						<a href="#nowhere">曲面机皇</a>
+						<a href="#nowhere">曲面机皇</a>
+						<a href="#nowhere">曲面机皇</a>
+					</div>
+				</div>
+			</div>
 			<div class="headbar">
 				<div class="head">
 					<span class="glyphicon glyphicon-th-list" style="margin-left: 10px"></span>
