@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	    <!-- 最新版本的 jQuery 核心 JavaScript 文件-->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<title>
+		商品列表
+	</title>
+
+	<style type="text/css">
+		div.homepageCategoryProducts{
+			background-color: #f5f5f5;
+			padding: 50px 10px 50px 10px;
+			margin: 10px auto; /*居中*/
+			max-width: 1013px;
+			height: auto;
+		}
+
+		div.productItem{
+			width: 189px;
+			height: 285px;
+			border:1px solid white;
+			background-color: white;
+			margin: 8px 4px;
+			float: left; /*向左漂浮*/
+			cursor: pointer;
+		}
+
+		div.productItem span.productItemDesc {
+			font-size: 12px;
+			color: #666666;
+			display: block;  /*以块状显示，自动换行*/
+			padding: 16px;
+		}
+
+		div.productItem span.productPrice{
+			font-size: 16px;
+			color: #ff003a;
+			display: block;
+			padding-left: 16px;
+			margin-top: -10px;
+		}
+
+		div.productItem img{
+			width: 187px;
+			height: 190px;
+		}
+
+		div.productItem img:hover{
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+		}
+
+		div.eachHomepageCategoryProducts{
+			margin: 0px 0px 40px 0px;
+		}
+
+		a.productItemDescLink {
+			display: inline-block;
+			height: 66px;
+			text-decoration: none;
+		}
+
+		span.categoryTitle {
+			font-size: 16px;
+			margin-left: 30px;
+			color: #646464;
+			font-weight: bold;
+		}
+
+		div.left-mark {
+			display: inline-block;  /*显示为内联元素*/
+			height: 20px;
+			width: 5px;
+			/*margin: 8px;*/
+			vertical-align: top; /*垂直局顶*/
+			background-color: #19c8a9;
+		}
+
+		img.endpng {
+			display: block; /*块状显示为了居中*/
+			width: 82px;
+			margin: 0 auto; /*居中*/
+		}
+	</style>
+</head>
+<body>
+
+<div class="homepageCategoryProducts">
+	<div class="eachHomepageCategoryProducts">
+		<div class="left-mark"></div>
+		<span class="categoryTitle">太阳镜</span>
+		<div style="clear: both;"></div>
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div style="clear: both;"></div>
+	</div>
+
+
+
+	<div class="eachHomepageCategoryProducts">
+		<div class="left-mark"></div>
+		<span class="categoryTitle">类目标题</span>
+		<div style="clear: both;"></div>
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div class="productItem">
+			<a href="#nowhere"><img src="http://how2j.cn/tmall/img/productSingle_middle/9543.jpg" width="100px"></a>
+			<a href="#nowhere" class="productItemDescLink">
+				<span class="productItemDesc">
+					[热销]好先生同款墨镜孙红雷偏光男士太阳镜日韩明星
+				</span>
+			</a>
+			<span class="productPrice">
+				97.50
+			</span>
+		</div>
+
+		<div style="clear: both;"></div>
+	</div>
+
+	<img src="http://how2j.cn/tmall/img/site/end.png" class="endpng">
+</div>
+
+</body>
+</html>
