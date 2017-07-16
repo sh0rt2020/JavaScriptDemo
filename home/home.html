@@ -12,112 +12,170 @@
 		<title>首页</title>
 
 		<style type="text/css">
-		div.categoryWithCarousel{
-			width: 100%;
-		}
-		div.categoryWithCarousel div.headbar{
-			background-color: #dd2727;
-		}
-		div.categoryWithCarousel div.head{
-			width: 200px;
-			height: 36px;
-			background-color: #c60a0a;
-			line-height: 36px;
-			font-size: 16px;
-			font-weight: bold;
-			color: white;
-			margin-left: 20px;
-			display: inline-block;
-		}
-		div.rightMenu{
-			display: inline-block;
-			font-size: 16px;
-			color: white;
-			text-decoration: none;
-		}
-		div.rightMenu span{
-			margin: 0px 20px 0px 20px;
-		}
-		div.rightMenu a{
-			color: white;
-			font-size: 16px;
-			/*font-weight: */
-		}
-		div.rightMenu img{
-			height: 30px;
-		}
-		div.carousel-of-product{
-			max-width: 100%;
-			height: 510px;
-		}
-		div.item img{
-			width: 100%;
-			height: 510px !important;
-		}
-		ol.carousel-indicators{
-			width: 20;
-			height: 20;
-		}
-		div.categoryMenu{
-			width: 200px;
-			/*height: */
-			background-color: #e2e2e3;
-			margin-left: 20px;
-			position: absolute; //绝对定位
-			left: 0px;
-			top: 0px;
-			z-index: 1;	
-		}
-		div.categoryMenu a{
-			color: black;
-		}
-		div.categoryMenu a:hover{
-			color: lightskyblue;
-			text-decoration: none; //去掉下划线
-		}
-		div.productsAsideCategorys{
-			width: 800px;
-			height: 510px;
-			background-color: white;
-			margin-left: 220px;
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: 1;
-		}
-		div.productsAsideCategorys div.row{
-			margin: 20px 80px 0px 80px;
-		}
-		div.productsAsideCategorys div.row div.seperator{
-			margin-top: 20px;
-			border-bottom-style: dashed;
-			border-bottom-width: 1px;
-			border-bottom-color: #e7e7e7;
-		}
-		div.productsAsideCategorys a{
-			color: #999;
-			font-size: 14px;
-			margin: 8px;
-		}
-		div.productsAsideCategorys a:hover{
-			color: #c40000;
-			text-decoration: none;
-		}
-		div.eachCategory{
-			line-height: 30px;
-			padding-left: 10px;
-			font-size: 14px;
-		}
-		div.eachCategory span{
-			margin-right: 10px;
-		}
-		div.eachCategory:hover{
-			background-color: white;
-		}
+			div.categoryWithCarousel{
+				width: 100%;
+			}
+			div.categoryWithCarousel div.headbar{
+				background-color: #dd2727;
+			}
+
+			img.catear {
+			    position: absolute;
+			    height: 15px;
+			    display: none;
+			}
+
+			div.categoryWithCarousel div.head{
+				width: 200px;
+				height: 36px;
+				background-color: #c60a0a;
+				line-height: 36px;
+				font-size: 16px;
+				font-weight: bold;
+				color: white;
+				margin-left: 20px;
+				display: inline-block;
+			}
+			div.rightMenu{
+				display: inline-block;
+				font-size: 16px;
+				color: white;
+				text-decoration: none;
+			}
+			div.rightMenu span{
+				margin: 0px 20px 0px 20px;
+			}
+			div.rightMenu a{
+				color: white;
+				font-size: 16px;
+				/*font-weight: */
+			}
+			div.rightMenu img{
+				height: 30px;
+			}
+			div.carousel-of-product{
+				max-width: 100%;
+				height: 510px;
+			}
+			div.item img{
+				width: 100%;
+				height: 510px !important;
+			}
+			ol.carousel-indicators{
+				width: 20;
+				height: 20;
+			}
+			div.categoryMenu{
+				width: 200px;
+				/*height: */
+				background-color: #e2e2e3;
+				margin-left: 20px;
+				position: absolute; /*绝对定位*/
+				left: 0px;
+				top: 0px;
+				z-index: 1;	
+			}
+			div.categoryMenu a{
+				color: black;
+			}
+			div.categoryMenu a:hover{
+				color: lightskyblue;
+				text-decoration: none; /*去掉下划线*/
+			}
+			div.productsAsideCategorys{
+				width: 800px;
+				height: 510px;
+				background-color: white;
+				margin-left: 220px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+			}
+			div.productsAsideCategorys div.row{
+				margin: 20px 80px 0px 80px;
+			}
+			div.productsAsideCategorys div.row div.seperator{
+				margin-top: 20px;
+				border-bottom-style: dashed;
+				border-bottom-width: 1px;
+				border-bottom-color: #e7e7e7;
+			}
+			div.productsAsideCategorys a{
+				color: #999;
+				font-size: 14px;
+				margin: 8px;
+			}
+			div.productsAsideCategorys a:hover{
+				color: #c40000;
+				text-decoration: none;
+			}
+			div.eachCategory{
+				line-height: 30px;
+				padding-left: 10px;
+				font-size: 14px;
+			}
+			div.eachCategory span{
+				margin-right: 10px;
+			}
+			div.eachCategory:hover{
+				background-color: white;
+			}
 		</style>
+
+		<script type="text/javascript">
+			$(function () {
+				$("div.rightMenu span").mouseenter(function () {
+					var left = $(this).position().left;
+					var top = $(this).position().top;
+					var width = $(this).css("width");
+					var desLeft = parseInt(left)+parseInt(width)/2;
+					$("img#catear").css("left", desLeft);
+					$("img#catear").css("top", top-20);
+					$("img#catear").fadeIn(500);
+				})
+
+				$("div.rightMenu span").mouseleave(function () {
+					$("img#catear").hide();
+				})
+			})
+
+			function showProductsAsideCategorys(cid){
+			    $("div.eachCategory[cid="+cid+"]").css("background-color","white");
+			    $("div.eachCategory[cid="+cid+"] a").css("color","#87CEFA");
+			    $("div.productsAsideCategorys[cid="+cid+"]").show();
+			}
+			 
+			function hideProductsAsideCategorys(cid){
+			    $("div.eachCategory[cid="+cid+"]").css("background-color","#e2e2e3");
+			    $("div.eachCategory[cid="+cid+"] a").css("color","#000");
+			    $("div.productsAsideCategorys[cid="+cid+"]").hide();
+			}
+			 
+			$(function(){
+			    $("div.eachCategory").mouseenter(function(){
+			        var cid = $(this).attr("cid");
+			        showProductsAsideCategorys(cid);
+			    });
+			    $("div.eachCategory").mouseleave(function(){
+			        var cid = $(this).attr("cid");
+			        hideProductsAsideCategorys(cid);
+			    });
+			    $("div.productsAsideCategorys").mouseenter(function(){
+			        var cid = $(this).attr("cid");
+			        showProductsAsideCategorys(cid);
+			    });
+			    $("div.productsAsideCategorys").mouseleave(function(){
+			        var cid = $(this).attr("cid");
+			        hideProductsAsideCategorys(cid);
+			    });
+			});
+		</script>
 	</head>
 
 	<body>
+	<div style="width: 50px;"></div>
+	<img class="catear" id="catear" src="http://how2j.cn/tmall/img/site/catear.png" style="left: 260.5px; top: 159.65px; display: none;">
 		<div class="categoryWithCarousel">
 			<div style="position: relative;">
 				<div class="categoryMenu">
