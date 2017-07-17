@@ -14,6 +14,8 @@
 		<style type="text/css">
 			div.categoryWithCarousel{
 				width: 100%;
+				/*top: 64px;*/
+				margin-top: 64px;
 			}
 			div.categoryWithCarousel div.headbar{
 				background-color: #dd2727;
@@ -22,6 +24,7 @@
 			img.catear {
 			    position: absolute;
 			    height: 15px;
+			    width: auto;
 			    display: none;
 			}
 
@@ -67,12 +70,12 @@
 			}
 			div.categoryMenu{
 				width: 200px;
-				/*height: */
 				background-color: #e2e2e3;
 				margin-left: 20px;
 				position: absolute; /*绝对定位*/
 				left: 0px;
-				top: 0px;
+				top: 36px;
+				display: inline-block;
 				z-index: 1;	
 			}
 			div.categoryMenu a{
@@ -89,7 +92,7 @@
 				margin-left: 220px;
 				position: absolute;
 				left: 0;
-				top: 0;
+				top: 36px;
 				z-index: 1;
 			}
 			div.productsAsideCategorys div.row{
@@ -129,10 +132,10 @@
 					var left = $(this).position().left;
 					var top = $(this).position().top;
 					var width = $(this).css("width");
-					var desLeft = parseInt(left)+parseInt(width)/2;
+					var desLeft = parseInt(left)+parseInt(width)/2+5;
 					$("img#catear").css("left", desLeft);
-					$("img#catear").css("top", top-20);
-					$("img#catear").fadeIn(500);
+					$("img#catear").css("top", top-18);
+					$("img#catear").fadeIn(200);
 				})
 
 				$("div.rightMenu span").mouseleave(function () {
@@ -174,7 +177,7 @@
 	</head>
 
 	<body>
-	<div style="width: 50px;"></div>
+	<!-- <div style="width: 50px;"></div> -->
 	<img class="catear" id="catear" src="http://how2j.cn/tmall/img/site/catear.png" style="left: 260.5px; top: 159.65px; display: none;">
 		<div class="categoryWithCarousel">
 			<div style="position: relative;">
@@ -266,7 +269,7 @@
 				</div>
 			</div>
 			<div style="position: relative;left: 0;top: 0;">
-				<div class="productsAsideCategorys" cid="83">
+				<div class="productsAsideCategorys" cid="83" style="display: none;">
 					<div class="row">
 						<a href="#nowhere">大屏影院</a>
 						<a href="#nowhere">周末</a>
@@ -303,6 +306,7 @@
 						<a href="#nowhere">智能操作系统</a>
 						<a href="#nowhere">智能操作系统</a>
 						<a href="#nowhere">智能操作系统</a>
+						<div class="seperator"></div>
 					</div>
 					<div class="row">
 						<a href="#nowhere">限时特惠</a>
@@ -313,6 +317,7 @@
 						<a href="#nowhere">限时特惠</a>
 						<a href="#nowhere">限时特惠</a>
 						<a href="#nowhere">限时特惠</a>
+						<div class="seperator"></div>
 					</div>
 					<div class="row">
 						<a href="#nowhere">YUNOS</a>
@@ -322,6 +327,7 @@
 						<a href="#nowhere">YUNOS</a>
 						<a href="#nowhere">YUNOS</a>
 						<a href="#nowhere">YUNOS</a>
+						<div class="seperator"></div>
 					</div>
 					<div class="row">
 						<a href="#nowhere">人气爆款</a>
@@ -332,15 +338,18 @@
 						<a href="#nowhere">人气爆款</a>
 						<a href="#nowhere">人气爆款</a>
 						<a href="#nowhere">人气爆款</a>
+						<div class="seperator"></div>
 					</div>
 					<div class="row">
 						<a href="#nowhere">曲面机皇</a>
 						<a href="#nowhere">曲面机皇</a>
 						<a href="#nowhere">曲面机皇</a>
 						<a href="#nowhere">曲面机皇</a>
+						<div class="seperator"></div>
 					</div>
 				</div>
 			</div>
+			<div style="clear: both;"></div>
 			<div class="headbar">
 				<div class="head">
 					<span class="glyphicon glyphicon-th-list" style="margin-left: 10px"></span>
