@@ -14,8 +14,8 @@
 		<style type="text/css">
 			div.categoryWithCarousel{
 				width: 100%;
-				/*top: 64px;*/
 				margin-top: 64px;
+				height: auto;
 			}
 			div.categoryWithCarousel div.headbar{
 				background-color: #dd2727;
@@ -178,18 +178,35 @@
 			    });
 			});
 
-			function setIframeHeight(iframe) {
-				if (iframe) {
-					var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-					if (iframeWin.document.body) {
-						// iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-						iframe.height = iframeWin.document.body.scrollHeight;
-					}
+			function setIframeHeight() {
+				var iframe = document.createElement("iframe");
+				iframe.src = "./itemlist.html";
+				iframe.scrolling = "no";
+				iframe.name = "itemlist";
+				iframe.id = "itemlist";
+				iframe.width = "100%";
+				// iframe.frameborder = "0";
+				iframe.border = "0";
+
+				if (iframe.attachEvent){
+				    iframe.attachEvent("onload", function(){
+								alert("Local iframe is now loaded. ie");
+				    });
+				} else {
+				    iframe.onload = function(){
+							// var headHeight = $("div.categoryWithCarousel").css("height");
+							var headHeight = document.getElementById("categoryWithCarousel").clientHeight;
+							iframe.height = document.body.scrollHeight-headHeight-50; //50 is padding-top height
+
+				        // alert("Local iframe is now loaded.");
+				    };
 				}
-			};
+
+				document.body.appendChild(iframe);
+			}
 
 				window.onload = function () {
-					setIframeHeight(document.getElementById('itemlist'));
+					setIframeHeight();
 				};
 		</script>
 	</head>
@@ -197,7 +214,7 @@
 	<body>
 	<!-- <div style="width: 50px;"></div> -->
 	<img class="catear" id="catear" src="http://how2j.cn/tmall/img/site/catear.png" style="left: 260.5px; top: 159.65px; display: none;">
-		<div class="categoryWithCarousel">
+		<div class="categoryWithCarousel" id="categoryWithCarousel">
 			<div style="position: relative;">
 				<div class="categoryMenu">
 					<div class="eachCategory" cid="83">
@@ -485,10 +502,5 @@
 				</a> -->
 			</div>
 		</div>
-		<!-- <div style="clear: both;"></div> -->
-		<!-- <div align=center class="itemlist"> -->
-		<!-- iframe -->
-		<iframe src="./itemlist.html" id="itemlist" name="itemlist" width="100%" onload="setIframeHeight(this)" frameborder="0" scrolling="no"></iframe>
-		<!-- </div> -->
 	</body>
 </html>
