@@ -181,7 +181,7 @@
 			function setIframeHeight() {
 				var iframe = document.createElement("iframe");
 				iframe.src = "./itemlist.html";
-				iframe.scrolling = "no";
+				// iframe.scrolling = "no";
 				iframe.name = "itemlist";
 				iframe.id = "itemlist";
 				iframe.width = "100%";
@@ -196,9 +196,9 @@
 				    iframe.onload = function(){
 							// var headHeight = $("div.categoryWithCarousel").css("height");
 							var headHeight = document.getElementById("categoryWithCarousel").clientHeight;
-							iframe.height = document.body.scrollHeight-headHeight-50; //50 is padding-top height
+							iframe.height = document.body.scrollHeight -headHeight; //50 is padding-top height
 
-				        // alert("Local iframe is now loaded.");
+				        // alert("Local iframe is now loaded."+headHeight+":"+document.body.scrollHeight+":"+iframe.height);
 				    };
 				}
 
